@@ -1,4 +1,4 @@
-# Week 1 Day 1: Terminal Velocity:The Scavenger Hun
+# Week 1 Day 1: Terminal Velocity:The Scavenger Hunt
 
 # Linux Foundations & FHS
 
