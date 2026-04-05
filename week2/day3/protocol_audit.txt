@@ -1,0 +1,42 @@
+
+; <<>> DiG 9.18.39-0ubuntu0.24.04.3-Ubuntu <<>> google.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 37916
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;google.com.			IN	A
+
+;; ANSWER SECTION:
+google.com.		8	IN	A	142.250.72.14
+
+;; Query time: 4 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53) (UDP)
+;; WHEN: Sun Apr 05 09:38:24 UTC 2026
+;; MSG SIZE  rcvd: 55
+
+HTTP/1.1 200 OK
+Server: nginx/1.24.0 (Ubuntu)
+Date: Sun, 05 Apr 2026 09:38:33 GMT
+Content-Type: text/html
+Content-Length: 615
+Last-Modified: Sun, 05 Apr 2026 09:32:15 GMT
+Connection: keep-alive
+ETag: "69d22c1f-267"
+Accept-Ranges: bytes
+
+Netid State  Recv-Q Send-Q                      Local Address:Port  Peer Address:PortProcess
+udp   UNCONN 0      0                              127.0.0.54:53         0.0.0.0:*          
+udp   UNCONN 0      0                           127.0.0.53%lo:53         0.0.0.0:*          
+udp   UNCONN 0      0                     192.168.64.4%enp0s1:68         0.0.0.0:*          
+udp   UNCONN 0      0      [fe80::f479:1aff:fee2:dd0e]%enp0s1:546           [::]:*          
+tcp   LISTEN 0      4096                            127.0.0.1:33343      0.0.0.0:*          
+tcp   LISTEN 0      4096                           127.0.0.54:53         0.0.0.0:*          
+tcp   LISTEN 0      4096                              0.0.0.0:22         0.0.0.0:*          
+tcp   LISTEN 0      4096                        127.0.0.53%lo:53         0.0.0.0:*          
+tcp   LISTEN 0      511                               0.0.0.0:8080       0.0.0.0:*          
+tcp   LISTEN 0      4096                                 [::]:22            [::]:*          
+tcp   LISTEN 0      511                                  [::]:8080          [::]:*          
