@@ -1,0 +1,23 @@
+  GNU nano 7.2                                                        /home/student/readiness_check.log                                                                  
+==================================================
+SESSION 16: READINESS INVENTORY
+==================================================
+Operator: Sefat E Monzor
+Date: 04/21/2026
+
+Confidence Audit (Yes/No):
+1. Nmap (Network Scanning): Yes
+2. Docker (Containerization): Yes
+3. Linux Hardening (UFW/chmod): Yes
+4. VS Code Remote-SSH: Yes 
+Identify your weakest area and your plan to review it:
+[My weakest area is Layer 4 port troubleshooting. Plan: Practice using ss -tlnp to find hidden services like Nginx more often]
+
+
+
+
+
+
+
+
+
