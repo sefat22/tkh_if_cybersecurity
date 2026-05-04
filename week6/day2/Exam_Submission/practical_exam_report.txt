@@ -1,0 +1,21 @@
+==================================================
+SESSION 17: PRACTICAL EXAM REPORT
+Operator: Sefat E Monzor
+==================================================
+TASK 1 (FIND): What single command did you use to 
+find all .log files owned by root?
+[sudo find / -user root -name "forge_alpha.log" "forge_beta.log" 2>/dev/null]
+
+TASK 2 (MV): What command did you use to move the 
+found files into ~/Exam_Submission?
+[sudo mv /forge_alpha.log ~/Exam_Submission]
+[sudo mv /forge_beta.log ~/Exam_Submission]
+
+TASK 3 (HARDENING): What command did you use to change 
+the moved files to read-only (444)?
+[To change the permissions of the files I used the sudo chmod 444 forge_alpha.log forge_beta.log command.At first I just used the chmod command since the log files are now in the Exam_Submission folder thinking it does not require the sudo user. However, changing the location does not change the permission access for files. Permissions can only be changed by owner or a sudo (superuser)  ]
+
+TASK 4 (OSI): Which layer handles the logical 
+addressing (IP)?
+[The Network layer]
+==================================================
