@@ -1,0 +1,39 @@
+# 📆 Week 7, Day 1: Passive Security Audit (The Invisible Scout)
+
+**Scenario:** TitanCorp is acquiring a startup named **CloudNano**. Before the deal closes, an authorized Passive Security Audit must be performed to map their full digital footprint without ever sending a single packet directly to their servers. The goal is to act as an invisible scout and leave absolutely no trace.
+
+---
+
+## 📁 Project Overview
+
+This phase focused entirely on **Passive Reconnaissance and Open-Source Intelligence (OSINT)**. Mastering public search infrastructure filters, subdomain asset mapping, credential exposure analysis, and third-party tech-stack identification is a core competency for Security Auditors and Vulnerability Analysts mapping an external attack surface without alerting the target.
+
+---
+
+## 🛠️ Tasks & Achievements
+
+* **Geographic Threat Targeting:** Leveraged advanced search engine filters (`city:"Allentown"`) on Shodan.io to isolate and analyze the density of exposed internet-facing infrastructure within a specific location.
+* **Passive Banner Grabbing:** Utilized free-tier Shodan text filters to safely capture plain-text service headers for high-risk protocols, including Remote Desktop Servers (`"Remote Desktop Protocol" port:3389`) and legacy file servers (`"vsFTPd 2.3.4" port:21`).
+* **Subdomain Attack Surface Discovery:** Executed `sublist3r` against proxy bug-bounty targets (such as `tesla.com`) to map out active subdomains, identifying potential hidden entry points like staging, development, or unmonitored host architectures.
+* **Infrastructure Tech-Stack Mapping:** Employed passive profiling platforms (BuiltWith.com / Wappalyzer) to reverse-engineer the target's external stack, identifying their primary Content Management System (CMS), Content Delivery Networks (CDNs), and cloud hosting environments.
+* **Credential Breach Exposure Verification:** Assessed domain-wide identity risks by cross-referencing public OSINT breach data (via structures like HaveIBeenPwned concepts) to isolate historical corporate email compromises.
+
+---
+
+## 🧠 Key Technical Competencies
+
+| Audit Phase | Tool / Method Used | Purpose in Security |
+| :--- | :--- | :--- |
+| **Global Reconnaissance** | `Shodan.io` (City Filters) | Identifying localized, exposed infrastructure footprints without direct scanning. |
+| **Vulnerability Identification** | Plain-Text Banner Grabbing | Pinpointing specific unpatched or legacy service versions (e.g., vsFTPd 2.3.4) leaking via public headers. |
+| **Asset Mapping** | `sublist3r -d [domain]` | Mapping full subdomain structures to discover hidden or abandoned development servers. |
+| **Identity Assessment** | OSINT Breach Scraping (`Hunter.io` / `HIBP`) | Identifying exposed employee credentials and corporate email naming conventions. |
+| **Stack Fingerprinting** | `BuiltWith.com` / `Wappalyzer` | Discovering running CMS, CDNs, and backends to identify potential exploit paths. |
+
+---
+
+## 🚧 Challenges & Resolutions
+
+* **Issue:** Free-tier limits or verification blocks on certain tools (like HaveIBeenPwned) prevented automated, domain-wide passive email queries.
+* **Root Cause:** Modern security platforms restrict multi-account domain intelligence queries to verified domain administrators to mitigate malicious targeting.
+* **Resolution:** Pivoted to alternative open-source scraping engines (`Hunter.io` and `PhoneBook.cz`) to passively map public corporate email patterns and deduce exposure profiles safely without active interaction.
