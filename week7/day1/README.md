@@ -1,39 +1,38 @@
-# 📆 Week 7, Day 1: Passive Security Audit (The Invisible Scout)
+# 📆 Week 7, Day 1: Passive Security Audit
 
-**Scenario:** TitanCorp is acquiring a startup named **CloudNano**. Before the deal closes, an authorized Passive Security Audit must be performed to map their full digital footprint without ever sending a single packet directly to their servers. The goal is to act as an invisible scout and leave absolutely no trace.
+**Scenario:** Performing a passive security audit on **CloudNano** during its acquisition by TitanCorp. The goal is to map their digital footprint completely invisibly.
 
 ---
 
 ## 📁 Project Overview
 
-This phase focused entirely on **Passive Reconnaissance and Open-Source Intelligence (OSINT)**. Mastering public search infrastructure filters, subdomain asset mapping, credential exposure analysis, and third-party tech-stack identification is a core competency for Security Auditors and Vulnerability Analysts mapping an external attack surface without alerting the target.
+This lab focuses on **Passive Reconnaissance and OSINT**. We mapped an external attack surface using public data and third-party tools without sending a single packet to the target's servers.
 
 ---
 
 ## 🛠️ Tasks & Achievements
 
-* **Geographic Threat Targeting:** Leveraged advanced search engine filters (`city:"Allentown"`) on Shodan.io to isolate and analyze the density of exposed internet-facing infrastructure within a specific location.
-* **Passive Banner Grabbing:** Utilized free-tier Shodan text filters to safely capture plain-text service headers for high-risk protocols, including Remote Desktop Servers (`"Remote Desktop Protocol" port:3389`) and legacy file servers (`"vsFTPd 2.3.4" port:21`).
-* **Subdomain Attack Surface Discovery:** Executed `sublist3r` against proxy bug-bounty targets (such as `tesla.com`) to map out active subdomains, identifying potential hidden entry points like staging, development, or unmonitored host architectures.
-* **Infrastructure Tech-Stack Mapping:** Employed passive profiling platforms (BuiltWith.com / Wappalyzer) to reverse-engineer the target's external stack, identifying their primary Content Management System (CMS), Content Delivery Networks (CDNs), and cloud hosting environments.
-* **Credential Breach Exposure Verification:** Assessed domain-wide identity risks by cross-referencing public OSINT breach data (via structures like HaveIBeenPwned concepts) to isolate historical corporate email compromises.
+* **Infrastructure Shodan Filters:** Used `city:"Allentown"` and banner-grabbing queries (`port:3389`, `vsFTPd 2.3.4`) to find exposed devices and vulnerable service headers.
+* **Subdomain Discovery:** Ran `sublist3r` on a proxy target (`tesla.com`) to passively uncover active subdomains.
+* **Tech Stack Mapping:** Used BuiltWith to identify corporate web infrastructure components (CMS, CDN, and Backend hosting).
+* **Credential Leak Analysis:** Investigated exposed corporate email structures and past database breach exposure via public OSINT concepts.
 
 ---
 
 ## 🧠 Key Technical Competencies
 
-| Audit Phase | Tool / Method Used | Purpose in Security |
+| Audit Phase | Tool / Method | Purpose in Security |
 | :--- | :--- | :--- |
-| **Global Reconnaissance** | `Shodan.io` (City Filters) | Identifying localized, exposed infrastructure footprints without direct scanning. |
-| **Vulnerability Identification** | Plain-Text Banner Grabbing | Pinpointing specific unpatched or legacy service versions (e.g., vsFTPd 2.3.4) leaking via public headers. |
-| **Asset Mapping** | `sublist3r -d [domain]` | Mapping full subdomain structures to discover hidden or abandoned development servers. |
-| **Identity Assessment** | OSINT Breach Scraping (`Hunter.io` / `HIBP`) | Identifying exposed employee credentials and corporate email naming conventions. |
-| **Stack Fingerprinting** | `BuiltWith.com` / `Wappalyzer` | Discovering running CMS, CDNs, and backends to identify potential exploit paths. |
+| **Global Recon** | Shodan Filters | Isolates exposed internet-facing infrastructure by location. |
+| **Banner Grabbing** | Plain-text Header Queries | Identifies unpatched software versions leaking to the public. |
+| **Asset Mapping** | `sublist3r` | Discovers forgotten or hidden staging and dev subdomains. |
+| **Identity Audit** | Breach Tracking / Email Scraping | Evaluates targets for phishing and credential-stuffing risks. |
+| **Stack Fingerprinting** | BuiltWith / Wappalyzer | Maps the CMS, CDN, and backend to find potential CVE paths. |
 
 ---
 
 ## 🚧 Challenges & Resolutions
 
-* **Issue:** Free-tier limits or verification blocks on certain tools (like HaveIBeenPwned) prevented automated, domain-wide passive email queries.
-* **Root Cause:** Modern security platforms restrict multi-account domain intelligence queries to verified domain administrators to mitigate malicious targeting.
-* **Resolution:** Pivoted to alternative open-source scraping engines (`Hunter.io` and `PhoneBook.cz`) to passively map public corporate email patterns and deduce exposure profiles safely without active interaction.
+* **Issue:** Free-tier limits or verification blocks on domain-wide email breach searches.
+* **Root Cause:** Platforms require proof of ownership for full domain access to prevent malicious targeting.
+* **Resolution:** Pivoted to alternative OSINT tools like Hunter.io to discover domain naming patterns and scrape public leak profiles passively.
