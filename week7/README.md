@@ -40,6 +40,47 @@ This lab focuses on **Passive Reconnaissance and OSINT**. We mapped an external 
 
 ---
 
+# 🎯 Week 7, Day 2: Active Scanning & Network Enumeration
+
+**Scenario:** Mapping a newly discovered internal subnet (`172.99.0.0/24`) to find active targets, discover open entry points, and investigate running services.
+
+---
+
+## 📁 Project Overview
+
+This lab focuses on **Active Reconnaissance and Scanning**. We directly interacted with a target network using Nmap to discover live hosts, map open ports, and pinpoint exact software versions to identify potential entry points.
+
+---
+
+## 🛠️ Tasks & Achievements
+
+* **Subnet Discovery (Ping Sweep):** Ran `nmap -sn` across the `/24` network to filter out dead space and identify 3 live target hosts (`.5`, `.6`, and `.7`).
+* **Target Alpha Version Scan:** Ran `sudo nmap -sV` against `172.99.0.5` to find open ports and software versions.
+* **Target Beta Full-Port Audit:** Scanned all 65,535 possible ports on `172.99.0.6` using `sudo nmap -sV -p-` to capture hidden services.
+* **Target Gamma Aggressive Profile:** Used aggressive scanning (`sudo nmap -A`) on `172.99.0.7` for rapid OS fingerprinting and service detection.
+* **Artifact Documentation:** Populated a clean network map (`nmap_scan_results.txt`) documenting every open port, service type, and version found.
+
+---
+
+## 🧠 Key Technical Competencies
+
+| Enumeration Phase | Tool / Method | Purpose in Security |
+| :--- | :--- | :--- |
+| **Host Discovery** | Ping Sweep (`-sn`) | Quickly finds live machines without alerting firewalls with port traffic. |
+| **Port Auditing** | Full Port Scan (`-p-`) | Checks every single digital door (1-65535) to find non-standard or hidden services. |
+| **Service Fingerprinting**| Version Detection (`-sV`)| Identifies the exact name and version of software to match against known bugs. |
+| **Aggressive Scanning** | Intense Scan (`-A`) | Combines OS detection, version scanning, and script checks in one step. |
+| **Threat Mapping** | Network Artifact Logging | Organizes scan data into a clear map for future vulnerability assessment. |
+
+---
+
+## 🚧 Challenges & Resolutions
+
+* **Issue:** High-intensity scanning flags (like `-A`) can draw heavy security alerts or crash systems.
+* **Root Cause:** Aggressive probes send rapid, complex packets that legacy or fragile corporate systems cannot process properly.
+* **Resolution:** Learned to balance scanning speed and intensity, using precise target sweeps first and saving intensive scans only for specific, isolated hosts.
+
+---
 
 # 🗺️ Operation Shadow Map: Perimeter Assessment Lab
 

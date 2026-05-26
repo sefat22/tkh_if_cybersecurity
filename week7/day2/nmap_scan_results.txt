@@ -1,0 +1,24 @@
+==================================================
+SESSION 20: NETWORK ENUMERATION MAP
+Target Subnet: 172.99.0.0/24
+==================================================
+
+HOST 1 (172.99.0.5)
+* Open Ports: 80/tcp
+* Service/Version: http | nginx 1.29.8
+
+HOST 2 (172.99.0.6)
+* Open Ports: 6379/tcp
+* Service/Version: redis | Redis key-value store 8.6.3
+
+HOST 3 (172.99.0.7)
+* Open Ports: 80/tcp
+* Service/Version: http | Apache httpd 2.4.67 ((Unix))
+
+QUESTIONS:
+1. What Nmap flag did you use to find the specific software versions running on these ports?
+Answer: I used the -sV flag (Service Version detection) for the first two hosts, and the -A flag (Aggressive scan, which includes version detection) for the third host.
+
+2. Why is it dangerous to run an intense scan (like -A) on a fragile legacy system?
+Answer: Aggressive scans send a high volume of complex, rapid, and non-standard packets to probe for OS details and vulnerabilities. Fragile legacy systems often have outdated network stacks or unstable services that can easily be overwhelmed, leading to service crashes, system lockups, or an unintended Denial of Service (DoS).
+
