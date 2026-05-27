@@ -82,6 +82,38 @@ This lab focuses on **Active Reconnaissance and Scanning**. We directly interact
 
 ---
 
+# 📅 Week 7, Day 3: The Prioritization Matrix — The Traveler's Guide
+
+**Scenario:** CloudNano has been scanned. The results are a mess. Brought in as Lead Engineer to run an automated audit, cut through 20 raw findings, and identify the 5 that pose the greatest actual risk to the business. 
+
+---
+
+## 📁 Project Overview
+This lab focuses on **Vulnerability Triage and Risk Prioritization**. We moved beyond raw CVSS scores to evaluate vulnerabilities based on the strategic formula $\text{Risk} = \text{Likelihood} \times \text{Impact}$ by checking environmental exposure and data criticality.
+
+---
+
+## 🛠️ Tasks & Achievements
+* **Target Provisioning:** Configured a local testing environment running a vulnerable web application server on port `8080`.
+* **Automated Web Scanning:** Executed `nikto` to analyze web server configurations, locate sensitive paths, and enumerate vulnerable software.
+* **Strategic Risk Analysis:** Extracted and parsed 20 raw configuration and software vulnerabilities from local audit logs.
+* **Remediation Documentation:** Drafted an actionable triage artifact separating systemic operational noise from high-risk business exposures.
+
+---
+
+## 🧠 Key Technical Competencies
+
+| Audit Phase | Tool / Method | Purpose in Security |
+| :--- | :--- | :--- |
+| **Web Infrastructure Scan** | `nikto` | Identifies server misconfigurations, unpatched versions, and default files. |
+| **Noise Filtering** | Manual Triage | Distinguishes between minor informational findings and high-criticality exposures. |
+| **Risk Modeling** | $\text{Likelihood} \times \text{Impact}$ | Prioritizes remediation based on actual business exploitability instead of static CVSS scores. |
+| **Remediation Mapping** | Markdown Artifacts | Formulates clean, evidence-based security priorities for executive and technical teams. |
+| **Version Control Deployment** | Git Flow & Git Push | Ensures security policy additions are tracked, approved, and backed up in production lines. |
+
+
+---
+
 # 🗺️ Operation Shadow Map: Perimeter Assessment Lab
 
 ## 📝 Project Overview
