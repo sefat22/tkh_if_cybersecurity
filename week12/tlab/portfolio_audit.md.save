@@ -1,0 +1,99 @@
+
+A collection of hands-on technical labs demonstrating practical expertise in defensive infrastructure, network resilience, threat mitigation, container isolation, and enterprise identity architecture. 
+
+This repository serves as a technical blueprint showcasing how I identify system weaknesses, remediate active misconfigurations, and build defensive automation scripts.
+
+---
+
+## 👨‍💻 Professional Profile
+
+Dynamic, security-driven IT specialist focused on protecting and automating hybrid enterprise environments. 
+
+* **Log Diagnostics & Monitoring:** Analyzing system activity to detect indicators of compromise (IoCs).
+* **Infrastructure Engineering:** Architecting secure network routing and troubleshooting stack failures.
+* **Defensive Scripting:** Developing operational workflows using Python and shell automation.
+* **Virtualization & Workloads:** Implementing secure microservices and isolated application containers.
+* **Access Control Architecture:** Deploying centralized identity management and domain policies.
+
+---
+
+## 🧰 Technical Stack
+
+### Environments & Platforms
+* Linux Distributions (Debian/Ubuntu ecosystems)
+* Windows Server Infrastructure (2022)
+
+### Networking & Security Protocols
+* Core TCP/IP routing, DNS configuration, VLSM/Subnetting, packet dynamics
+
+### Scripting & Automation Languages
+* Python 3, Bash Shell, PowerShell Core
+
+### Directory Services & Microservices
+* Docker engine & Compose syntax
+* Active Directory Domain Services (AD DS)
+* Linux-to-AD Integration (`sssd`, `realmd`)
+
+### Workflow Management
+* Git version control and repository architecture
+
+---
+
+## 📂 Laboratory Roadmap
+
+* **`01-os-hardening`** → Operating system defense, privilege auditing, and post-incident investigation.
+* **`02-network-resilience`** → Interface rebuilding, routing recovery, and deep packet analytics.
+* **`03-automation-defense`** → Developing defensive script logic and programmatic alerting systems.
+* **`04-isolated-workloads`** → Container isolation strategies and strict perimeter segmentation.
+* **`05-identity-governance`** → Domain architecture, centralized policy push, and cross-platform IAM.
+
+---
+
+## 📌 Technical Deep Dives
+
+### 🔍 Log Analysis & Threat Intelligence
+* Designed logical parsing scripts to monitor authentication files for credential stuffing.
+* Isolated adversarial source IPs to compile actionable JSON-formatted indicator feeds.
+* Streamlined incident pipelines from raw file ingestion to actionable security notifications.
+
+### 🌐 Perimeter Defense & Network Revival
+* Reconstructed network profiles and routing rules on a non-functional asset to restore traffic.
+* Resolved addressing conflicts and gateway configuration errors blocking external transit.
+* Verified the integrity of the recovered connection by verifying three-way handshake parameters.
+
+### 🐳 Containerized Environment Isolation
+* Initialized restricted runtime environments to isolate application threats.
+* Created multi-tier configurations that enforce strict boundary walls between apps and databases.
+* Tested perimeter defenses to confirm zero unauthorized cross-network leakage.
+
+### 🏢 Centralized Directory & Policy Enforcement
+* Configured and deployed a functional Active Directory Domain Controller (`titan.local`).
+* Built automation engines to handle batch employee provisioning securely.
+* Established baseline configuration controls via Group Policy Objects (GPOs).
+* Configured secure PAM subsystems on Linux endpoints for native AD credential validation.
+
+---
+
+## 📊 Engineered Artifacts
+
+| Focus Area | Asset Name | Functional Description |
+| :--- | :--- | :--- |
+| **System Defense** | `lockdown.sh` | Shell engine for automated operating system baselining. |
+| **Digital Forensics** | `compromise_summary.txt` | Deep-dive forensic summary of malicious host activity. |
+| **Network Architecture** | `network_topology.txt` | Corrected CIDR matrix and structural address mapping. |
+| **Traffic Recovery** | `outage_resolution.txt` | Technical write-up on system revival with packet verifications. |
+| **Utility Scripting** | `socket_scanner.py` | Light footprint Python script for target port availability testing. |
+| **Automation** | `threat_parser.py` | Complete log extraction and automated alert generator. |
+| **Container Security** | `secure-stack.yml` | Multi-layered application profile with isolated backend fabrics. |
+| **Identity Controls** | `provision_users.ps1` | Functional pipeline script for bulk domain account injection. |
+| **Access Auditing** | `policy_compliance.txt` | Verification report mapping applied domain settings. |
+
+---
+
+## 🎯 Target Milestones
+
+I am looking to step into a technical, high-impact **Security Analyst, SOC Engineer, or Infrastructure Security Specialist** position where I can deploy hands-on skills in:
+* Real-time monitoring and incident remediation.
+* Infrastructure defense-in-depth and architectural hardening.
+* Writing operational code to solve modern security overhead.
+* Managing enterprise authentication boundaries.
