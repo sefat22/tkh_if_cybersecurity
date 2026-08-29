@@ -1,4 +1,3 @@
-cat << 'EOF' > README.md
 # TKH Fortress Capstone
 
 A Terraform project that provisions a small AWS web-server environment (VPC, public subnet, security group, and EC2 instance) behind an automated CI security gate. Built as a capstone project to demonstrate Infrastructure as Code alongside DevSecOps practices.
@@ -29,7 +28,6 @@ All hardcoded values (region, CIDR blocks, instance type, allowed SSH IP) are ex
 * A `terraform.tfvars` file (created from `terraform.tfvars.example`) with at least `my_ip` set to your own IP in `/32` format.
 
 ### Deployment Steps
-
 1. Initialize project plugins:
    ```bash
    terraform init
