@@ -1,5 +1,3 @@
-
-```bash
 cat << 'EOF' > README.md
 # TKH Fortress Capstone
 
